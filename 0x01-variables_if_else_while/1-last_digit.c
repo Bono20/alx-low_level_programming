@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Determine if the last digit of a random number is
+ * main - Prints all the last digit
  * greater than or less than 5, or is zero..
- * Return: 0 on success
+ * Return: 
  */
 int main(void)
 {
@@ -24,7 +24,7 @@ int main(void)
 	else
 	{
 		printf("last digit of %d is %d and is 0\n", n, n % 10);
-	}
+
 	return (0);
 }
 
