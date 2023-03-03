@@ -1,31 +1,18 @@
-#include <stdlib.h>
 #include "main.h"
 /**
- * _strstr - locates a substring
- * @haystack: the longer string to search
- * @needle: the substring to search for
- *
- * Return: a pointer to the beginning of the located substring, or NULL if
- * the substring is not found.
+ * string_toupper - changes all
+ *  lowercase letters of a string to uppercase
+ * @z: letters to check
+ * Return: uppercase letters
  */
-char *_strstr(char *haystack, char *needle)
+char *string_toupper(char *z)
 {
 	int i;
-	int s = 0;
 
-	while (needle[s] != '\0')
-		s++;
-	while (*haystack)
+	for (i = 0; z[i] != '\0'; i++)
 	{
-		for (i = 0; needle[i]; i++)
-		{
-			if (haystack[i] != needle[i])
-				break;
-		}
-		if (i != s)
-			haystack++;
-		else
-			return (haystack);
+		if (z[i] >= 97 && z[i] <= 122)
+			z[i] -= 32;
 	}
-	return (NULL);
+	return (z);
 }

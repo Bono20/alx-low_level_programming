@@ -1,24 +1,21 @@
-#include <stdlib.h>
 #include "main.h"
 /**
- * _strpbrk - searchs a string for any of a set of bytes
- * @s: the string to search
- * @accept: the bytes to search for
- * Return: a pointer to the byte in @s that matches one of the bytes in
- * @accept, or NULL if no such byte is found.
+ * reverse_array - reverse the content of an array of integers
+ * @a: the array to reverse
+ * @n: the number of elements in the array
+ * Return: nothing
  */
-char *_strpbrk(char *s, char *accept)
+void reverse_array(int *a, int n)
 {
-	int i;
+	int temp; /* holds value */
+	int i; /* counter */
+	int j = n - 1; /* reverse counter */
 
-	while (*s)
+	for (i = 0; i < j; i++)
 	{
-		for (i = 0; accept[i]; i++)
-		{
-			if (*s == accept[i])
-				return (s);
-		}
-		s++;
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+		j--;
 	}
-	return (NULL);
 }
