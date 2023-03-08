@@ -27,7 +27,7 @@ int palind3(char *a, int l)
 		return (0);
 	else if (*a == 0)
 		return (1);
-	return (palind3(a + 1, 1 - 2));
+	return (palind3(a + 1, l - 2));
 }
 /**
  * is_palindrome - checks if a string is a palindrome
