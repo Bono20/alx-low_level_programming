@@ -1,5 +1,5 @@
-#ifndef DOG
-#define DOG
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - Dog attributes
@@ -12,6 +12,7 @@
  *
  * Description: The attributes of a dog.
  */
+
 struct dog
 {
 	char *name;
